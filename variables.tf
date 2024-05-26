@@ -58,6 +58,11 @@ variable "private_subnet_cidrs_tags" {
     default = {}  
 }
 
+variable "nat_gateway_tags" {
+    type = map 
+    default = {}  
+}
+
 ### Database Subnet 
 
 variable "database_subnet_cidrs" {
@@ -69,6 +74,27 @@ variable "database_subnet_cidrs" {
     }
 }
 variable "database_subnet_cidrs_tags" {
+    type = map 
+    default = {}  
+}
+
+# Public Route Table 
+
+variable "public_route_table_tags" {
+    type = map 
+    default = {}  
+}
+
+# Private Route Table 
+
+variable "private_route_table_tags" {
+    type = map 
+    default = {}  
+}
+
+# Database Route Table 
+
+variable "database_route_table_tags" {
     type = map 
     default = {}  
 }
